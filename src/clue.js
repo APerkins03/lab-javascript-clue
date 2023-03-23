@@ -91,23 +91,36 @@ const suspectsArray = [
   
   const weaponsArray = [
    
-    {name: "rope"  weight: 10},
-    {name: "knife"  weight: 8},
-    {name: "candlestick"  weight: 2},
-    {name: "dumbbell"  weight: 30},
-    {name: "poison"  weight: 2},
-    {name: "axe"  weight: 15},
-    {name: "bat"  weight: 13},
-    {name: "trophy"  weight: 25},
-    {name: "pistol"  weight: 20},
+    {name: "rope",  weight: 10},
+    {name: "knife",  weight: 8},
+    {name: "candlestick",  weight: 2},
+    {name: "dumbbell",  weight: 30},
+    {name: "poison",  weight: 2},
+    {name: "axe",  weight: 15},
+    {name: "bat",  weight: 13},
+    {name: "trophy",  weight: 25},
+    {name: "pistol",  weight: 20},
   ];
   
   
   // ITERATION 2
   
-  function selectRandom() {}
-  
-  function pickMystery() {}
+  function selectRandom(Array) {
+    let randomNumber = Math.random();
+    randomNumber = randomNumber * Array.length;
+    randomNumber = Math.floor(randomNumber);
+    return Array[randomNumber];
+   }
+ 
+ function pickMystery () {
+ 
+     return {
+     weapon: selectRandom(weaponsArray),
+     suspect: selectRandom(suspectsArray),
+     room: selectRandom(roomsArray),
+     }
+ }
+ console.log(selectRandom(suspectsArray))
   
   
   // ITERATION 3
