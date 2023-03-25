@@ -125,6 +125,9 @@ const suspectsArray = [
   
   // ITERATION 3
   
-  function revealMystery() {}
+  function revealMystery(mys) {
+    return `${mys.suspect.firstName} ${mys.suspect.lastName} killed Mr. Boddy using the ${mys.weapon.name} in the ${mys.room.name}!`;
+}
+console.log(revealMystery(mys))
   
 
